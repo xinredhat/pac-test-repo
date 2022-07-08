@@ -55,7 +55,7 @@ spec:
         taskRef:
           name: yaml-lint
         workspaces:
-          - name: shared-workspace
+          - name: source
             workspace: source
         params:
           - name: args
