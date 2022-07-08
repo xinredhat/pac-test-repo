@@ -43,6 +43,8 @@ spec:
           - name: source
             workspace: source
         taskSpec:
+          workspaces:
+            - name: source
           steps:
             - name: run-shellcheck
               image: quay.io/bnr/shellcheck:latest
@@ -53,8 +55,6 @@ spec:
         runAfter:
           - shellcheck-run
         taskRef:
-          workspaces:
-            - name: source
           name: yaml-lint
         workspaces:
           - name: shared-workspace
