@@ -53,9 +53,11 @@ spec:
         runAfter:
           - shellcheck-run
         taskRef:
+          workspaces:
+            - name: source
           name: yaml-lint
         workspaces:
-          - name: source
+          - name: shared-workspace
             workspace: source
         params:
           - name: args
