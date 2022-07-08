@@ -1,0 +1,27 @@
+apiVersion: workload.kcp.dev/v1alpha1
+kind: WorkloadCluster
+metadata:
+  name: local
+  namespace: default
+spec:
+  kubeconfig: |
+    apiVersion: v1
+    clusters:
+      - cluster:
+          insecure-skip-tls-verify: true
+          server: https://api.ci-ln-49cvsn2-72292.origin-ci-int-gce.dev.rhcloud.com:6443
+        name: api-ci-ln-49cvsn2-72292-origin-ci-int-gce-dev-rhcloud-com:6443
+    contexts:
+      - context:
+          cluster: api-ci-ln-49cvsn2-72292-origin-ci-int-gce-dev-rhcloud-com:6443
+          namespace: default
+          user: kube:admin/api-ci-ln-49cvsn2-72292-origin-ci-int-gce-dev-rhcloud-com:6443
+        name: default/api-ci-ln-49cvsn2-72292-origin-ci-int-gce-dev-rhcloud-com:6443/kube:admin
+    current-context: default/api-ci-ln-49cvsn2-72292-origin-ci-int-gce-dev-rhcloud-com:6443/kube:admin
+    kind: Config
+    preferences: {}
+    users:
+      - name: kube:admin/api-ci-ln-49cvsn2-72292-origin-ci-int-gce-dev-rhcloud-com:6443
+        user:
+          token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklqUkdjRzQxU0ZaWFYwOVdPR1JUVVhrMWVFNDBSR0k1TFc5SlRVdEhWRVZ5T0dwR1dFeEZWVE51WjBFaWZRLmV5SnBjM01pT2lKcmRXSmxjbTVsZEdWekwzTmxjblpwWTJWaFkyTnZkVzUwSWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXVZVzFsYzNCaFkyVWlPaUpyWTNBdGNHTnNkWE4wWlhJaUxDSnJkV0psY201bGRHVnpMbWx2TDNObGNuWnBZMlZoWTJOdmRXNTBMM05sWTNKbGRDNXVZVzFsSWpvaWEyTndMWFJ2YTJWdUxXYzJPWFpvSWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXpaWEoyYVdObExXRmpZMjkxYm5RdWJtRnRaU0k2SW10amNDSXNJbXQxWW1WeWJtVjBaWE11YVc4dmMyVnlkbWxqWldGalkyOTFiblF2YzJWeWRtbGpaUzFoWTJOdmRXNTBMblZwWkNJNklqVTJNR1E0WlRFM0xUazJOVGt0TkRFd1lpMDVZelUzTFRZd01tRmtOalEyWlRsa05DSXNJbk4xWWlJNkluTjVjM1JsYlRwelpYSjJhV05sWVdOamIzVnVkRHByWTNBdGNHTnNkWE4wWlhJNmEyTndJbjAuZkVCYlJpX21mVnFXcWU5bWhQMk92ZnVxOVZkc2tudDI5aHBodEFJcFp6c1ZYNWZueTdHMWJQbHlpdWc1YXpsQ0lvcUZqd29XQzVRNTlOWUdXVEhUOTBfOFgweVRiNnAzbEpLV3NOd1FZbFkxeTlTVlhLeEFGOGhkNWs0WGJSZUpqRTN5d1hEd2F4WFhSdWRTQWRCSjVCWFNyY2RCbUg5Z003akRSY1IycVgxNzZuRzNCY08wWFMtM1FWbU13U0dxSFZyazR2WTBtT1NIdHNyUVR1Qm5MellhQkd0ZDZaSGJodlJEMHJpSnFQaWdVclJqaTl5ZGJNUmMxRlNEbkpXME9BVno3Mm5kd091bkd2OHExU1o2dFc0aGVrbXhvT2EyRkRCU01SaGJGQm94cGlZS2NKTjB2MXVvR2VoWTJKX2VTNW5PQzVyVG04LVRCV1JKNmZ3V1QyWGJQbE4wdGI4aWFuSHNNd3hFWHNtejdla2xROHFuVWVrTnFsa3dRcy1RRzZZOG10ZjBmNlRuSnhHaUNiaUh1MWZvQkZJVWJPb3Y0NzZBYWJuYjdDa0RqTjhsTGVSTjZkU2E2THY1eWd6b0ptTzVFTmlSQlpzd1BSdW1XcVd4MUFza0xreXNheVJuTTJWaTBZenk5S01sWEVna0p3dW5oRzJNazRucHJGRURidHBCTHU5RlVSN1lFbEd5M2N5YmZnV1hKVHI3eXlRZUZZMVJDM3Z1aVAtb3prVDhPV2pjUWRncGkxRThtRDlib0NoUzk0SVQ2WDlkYk5heFJtekIxWVJqbXdaS0hBaE5OOVJ0UjVKWGhqSkh6VmJXUXBiUTNSRklsRkJuVkdOdjRxV0JYaWwtODVyREtOOEItRzl3dng0WHRoUGdlNTFhZnE3VjZXOVc1WWc=
+
