@@ -2,6 +2,7 @@ apiVersion: workload.kcp.dev/v1alpha1
 kind: WorkloadCluster
 metadata:
   name: local
+  namespace: default
 spec:
   kubeconfig: |
     apiVersion: v1
