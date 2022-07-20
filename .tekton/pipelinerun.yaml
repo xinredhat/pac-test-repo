@@ -48,6 +48,8 @@ spec:
               workingDir: $(workspaces.source.path)
               script: |
                 find . -name "*.sh" | xargs -n 1 shellcheck --color=always
+          workspaces:
+            - name: source
       - name: yaml-lint-check
         runAfter:
           - shellcheck-run
