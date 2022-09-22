@@ -28,7 +28,7 @@ jobs:
       # Triggers Gitlab CI test
       - name: Trigger Gitlab CI
         env:
-          gitlab_token: ${{ secrets.GITLAB_TRIGGER_TOKEN }}
-          ca_cert: ${{ secrets.CA_CERT }}
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TRIGGER_TOKEN }}
+          CA_CERT: ${{ secrets.CA_CERT }}
         run: |
-          ./scripts/triggergitlabci.sh
+          ./images/gitlab-trigger/run.sh
