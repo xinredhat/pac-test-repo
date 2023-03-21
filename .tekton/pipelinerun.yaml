@@ -44,10 +44,12 @@ spec:
         taskSpec:
           steps:
             - name: run-shellcheck
-              image: quay.io/bnr/shellcheck:latest
-              workingDir: $(workspaces.source.path)
+              image: quay.io/xinjiang/shellcheck:latest
               script: |
-                find . -name "*.sh" | xargs -n 1 shellcheck --color=always
+                #!/usr/bin/env bash
+                find . -name "*.sh" -exec  shellcheck --severity=warning  {} +
+          workspaces:
+            - name: source
       - name: yaml-lint-check
         runAfter:
           - shellcheck-run
